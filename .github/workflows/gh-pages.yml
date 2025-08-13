@@ -1,37 +1,52 @@
-name: Deploy Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
 
 on:
   push:
     branches:
-      - main  # main 브랜치에 push될 때 배포
+      - main  # main 브랜치에 push될 때 실행
+  workflow_dispatch: # 수동 실행도 가능
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true  # 테마를 서브모듈로 가져옴
+          submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.146.0'
+          hugo-version: "0.146.0"
           extended: true
 
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
