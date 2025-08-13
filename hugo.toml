@@ -1,5 +1,5 @@
 # ~/dev-blog/hugo.toml
-baseURL = "http://localhost:1313/"
+baseURL = "https:winefools.github.io/dev-blog/"
 languageCode = "en-us"
 title = "Dev Blog"
 theme = "stack"

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Devlog on Dev Blog</title><link>https:winefools.github.io/dev-blog/tags/devlog/</link><description>Recent content in Devlog on Dev Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 13 Aug 2025 17:40:17 +0900</lastBuildDate><atom:link href="https:winefools.github.io/dev-blog/tags/devlog/index.xml" rel="self" type="application/rss+xml"/><item><title>Stack Test</title><link>https:winefools.github.io/dev-blog/posts/stack-test/</link><pubDate>Wed, 13 Aug 2025 17:40:17 +0900</pubDate><guid>https:winefools.github.io/dev-blog/posts/stack-test/</guid><description>&lt;p>ChatGPT의 말:&lt;/p>
+&lt;p>좋아요, 그럼 Stack 테마에서 바로 뜨는 포스트를 새로 만들어 보죠.&lt;/p>
+&lt;ol>
+&lt;li>포스트 생성&lt;/li>
+&lt;/ol>
+&lt;p>터미널에서:&lt;/p>
+&lt;p>cd ~/dev-blog
+hugo new posts/stack-test.md&lt;/p>
+&lt;ol start="2">
+&lt;li>파일 열기 &amp;amp; 내용 수정&lt;/li>
+&lt;/ol>
+&lt;p>content/posts/stack-test.md 열고 이렇게 수정하세요:&lt;/p>
+&lt;hr>
+&lt;h2 id="categories-development">title: &amp;ldquo;Stack Theme Test Post&amp;rdquo;
+date: 2025-08-13T19:00:00+09:00
+draft: false
+tags: [&amp;ldquo;devlog&amp;rdquo;]
+categories: [&amp;ldquo;development&amp;rdquo;]
+&lt;/h2>&lt;p>본문은 자유롭게 작성:&lt;/p>
+&lt;p>이건 Stack 테마에서 보이는 테스트 포스트입니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;Hello Stack!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">## 3. 서버 실행 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">```&lt;/span>bash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server -t stack
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 목록 페이지: http://localhost:1313/posts/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 글 페이지: http://localhost:1313/posts/stack-test/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>📌 만약 여전히 안 뜬다면,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server -t stack -D -F
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>로 실행해서 draft 글과 미래 날짜 글까지 포함해서 확인할 수 있습니다.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>원하시면 제가 Stack 테마에 맞춰 자동 포스트 생성 템플릿을 만들어 드릴 수 있습니다.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>그렇게 하면 다음부터는 hugo new posts/xxx.md 하면 바로 목록에 뜨게 됩니다.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
