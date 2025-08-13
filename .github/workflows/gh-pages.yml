@@ -3,7 +3,10 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main   # main 브랜치에 push될 때 실행
+      - main
+
+permissions:        # ← 중요: Actions가 push 가능하도록 권한 부여
+  contents: write
 
 jobs:
   build-deploy:
@@ -13,13 +16,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true      # themes 폴더 서브모듈 포함
-          fetch-depth: 0        # 전체 히스토리 가져오기
+          submodules: true
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.146.0' # 현재 설치된 Hugo 버전과 맞추기
+          hugo-version: '0.146.0'
           extended: true
 
       - name: Build
@@ -30,4 +33,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
+          publish_branch: gh-pages   # ← 배포 브랜치 명시
