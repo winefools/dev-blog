@@ -1,10 +1,25 @@
-# ~/dev-blog/hugo.toml
-baseURL = "https:winefools.github.io/dev-blog/"
+baseURL = "https://winefools.github.io/dev-blog/"
 languageCode = "en-us"
 title = "Dev Blog"
 theme = "stack"
+
+# 최신 Hugo에서 paginate 대신 pagerSize 사용
 [pagination]
-pagerSize = 10
+  pagerSize = 10
 
 [params]
-  mainSections = ["posts"]   
+  mainSections = ["posts"]
+  description = "개발 블로그"
+  favicon = "favicon.ico"
+
+# 메뉴 예시
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
